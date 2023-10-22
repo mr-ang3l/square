@@ -1,0 +1,30 @@
+@import './base.css'; 
+
+/* 
+White: #FBFAF6
+Blue:  #0001FC
+Black: #010101
+Black 2: #161616
+*/
+
+html {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#app {
+  box-sizing: border-box;
+  width: 98vh;
+  height: 98vh;
+  min-width: 500px;
+  min-height: 500px;
+  margin: 0;
+  padding: 0;
+  font-weight: normal; 
+  background-color: #FBFAF6;
+}
+
+body {
+  background-color:  #161616;
+}
