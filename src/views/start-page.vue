@@ -127,7 +127,7 @@ a:active {
 
 @media only screen and (max-width: 500px) {
   .title {
-    font-size: clamp(1rem, 1.5rem + 10.333vh, 10rem);
+    font-size: clamp(1rem, 1.5rem + 5.333vw, 10rem);
   }
 }
 

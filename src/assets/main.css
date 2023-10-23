@@ -33,5 +33,7 @@ body {
   #app {
     width: 98vw;
     height: 98vw;
+    min-width: 300px;
+    min-height: 300px;
   }
 }
