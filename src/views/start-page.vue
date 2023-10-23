@@ -1,12 +1,16 @@
 <template>
   <main class="login">
+    <a class="about" href="https://www.google.com/" target="blank">?</a>
     <h1 class="title">SQUARE</h1>
     <div class="input">
-    <div class="input-title">Login</div>
-    <input type="email" placeholder="Email" />
-    <input type="password" placeholder="Password" />
-    <input type="submit" value="Send" />
-  </div>
+      <div class="input-title">
+        Login /
+        <a href="https://www.google.com/" target="blank">Join</a>
+      </div>
+      <input type="email" placeholder="Email" />
+      <input type="password" placeholder="Password" />
+      <input type="submit" value=">>>>" />
+    </div>
   </main>
 </template>
 
@@ -21,38 +25,44 @@
   src: url('../assets/fonts/nikea/NIKEA.otf') format('opentype');
 }
 
-.wrapper {
-  height: 100%;
-}
-
-.wrapper >  *  {
-  border: solid rgb(223, 59, 59)  1px;
+. > * {
+  border: solid blue 1px;
 }
 
 .about {
   z-index: 2;
   width: 100%;
-  color: black;
+  height: fit-content;
+  padding-inline: 1em;
+  grid-column: 1;
+  grid-row: 1;
+  text-align: right;
+  font-weight: bold;
+  color: #0001fc;
 }
 
 .login {
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
 }
 
 .title {
-  width: fit-content;
+  width: 100%;
+  grid-column: 1;
+  grid-row: 1;
   text-align: center;
-  color: #0001fc;
+  align-self: end;
   font-family: 'Nikea';
   font-size: clamp(1rem, 1.5rem + 10.333vh, 10rem);
+  color: #0001fc;
   cursor: default;
 }
 
 .input {
+  grid-column: 1;
+  grid-row: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -65,6 +75,15 @@ input[type='password'] {
   font-family: 'Helvetica';
   border: 1px solid black;
   border-radius: 0;
+}
+
+textarea:focus,
+input:focus,
+input[type='email']:focus,
+input[type='email']:active {
+  outline: none;
+  text-decoration: none;
+  border: 1px #0001fc solid;
 }
 
 input[type='submit'] {
@@ -84,5 +103,19 @@ input[type='submit'] {
   font-family: 'Nikea';
   color: #0001fc;
   cursor: default;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #0001fc;
+  transition: all 55ms ease-in;
+}
+
+a:hover,
+a:active {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #0001fc;
+  color: white;
 }
 </style>
