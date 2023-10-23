@@ -1,3 +1,8 @@
+<script setup>
+import {RouterLink} from 'vue-router';
+
+</script>
+
 <template>
   <main class="login">
     <a class="about" href="https://www.google.com/" target="blank">?</a>
@@ -9,7 +14,8 @@
       </div>
       <input type="email" placeholder="Email" />
       <input type="password" placeholder="Password" />
-      <input type="submit" value=">>>>" />
+      <!-- input type="submit" value=">>>>"/ -->
+      <RouterLink  to="/profile" > >>>> </RouterLink>
     </div>
   </main>
 </template>
