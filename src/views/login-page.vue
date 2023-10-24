@@ -15,7 +15,7 @@ import {RouterLink} from 'vue-router';
       <input type="email" placeholder="Email" />
       <input type="password" placeholder="Password" />
       <!-- input type="submit" value=">>>>"/ -->
-      <RouterLink  to="/profile" > >>>> </RouterLink>
+      <RouterLink  :to="{name: 'Profile'}" > >>>> </RouterLink>
     </div>
   </main>
 </template>
@@ -70,7 +70,6 @@ import {RouterLink} from 'vue-router';
   background-clip: text;
   -webkit-background-clip: text;
   color: rgba(0, 1, 252, .5);
-;
 }
 
 .input {

@@ -7,7 +7,7 @@ import {RouterLink} from 'vue-router';
     <section class="name_grid">
       <a class="name" href="https://x.com/fredagainagain1?s=20" target="blank">Fred again...</a>
       <div class="profile_photo_container">
-        <RouterLink  to="/settings">
+        <RouterLink  :to="{name: 'Center'}">
           <img alt="profile_photo" class="profile_photo" src="../assets/img/profile_picture.webp"/>
         </RouterLink>
       </div>

@@ -4,14 +4,10 @@ import {RouterLink} from 'vue-router';
 
 <template>
     <main class="settings_grid">
-        <RouterLink  to="/profile">Me</RouterLink>
-        <a href="">Invite?</a>
-        <a href="">Add?</a>
-        <a href="">Followers</a>
-        <a href="">Following</a>
-        <a href="">Square</a>
-        <a href="">Settings</a>
-        <RouterLink  to="/">Exit</RouterLink>
+        <RouterLink  :to="{name: 'Profile'}">Me</RouterLink>
+        <RouterLink  :to="{name: 'CenterInvite'}">Invite?</RouterLink>
+        <RouterLink  :to="{name: 'CenterAdd'}">Add?</RouterLink>
+
     </main>
 </template>
 
@@ -27,13 +23,15 @@ import {RouterLink} from 'vue-router';
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        text-align: left;
         font-family: Helvetica;
     }
 
     .settings_grid > * {
+        width: 4em;
         margin: 0;
         padding: 0;
-        margin-block: 1px;
+        text-align: left;
         text-decoration: none;
         font-size: 1.5em;
         color: #0001fc;

@@ -1,7 +1,10 @@
 import {createRouter, createWebHistory} from "vue-router";
-import Start from "../views/start-page.vue";
+import Login from "../views/login-page.vue";
 import Profile from "../views/profile-page.vue";
-import Settings from "../views/settings-page.vue"
+import Center from "../views/center/center-page.vue"
+import Invite from "../views/center/center-page-invite.vue"
+import Add from "../views/center/center-page-add.vue"
+import NotFound from "../views/not-found.vue";
 
 
 const router = createRouter({
@@ -9,18 +12,33 @@ const router = createRouter({
     routes: [
       {
         path: "/",
-        name: "home",
-        component: Start
+        name: "Login",
+        component: Login
       },
       {
         path: "/profile",
-        name: "profile",
+        name: "Profile",
         component: Profile
       },
       {
-        path: "/settings",
-        name: "settings",
-        component: Settings
+        path: "/center",
+        name: "Center",
+        component: Center
+      },
+      {
+        path: "/settings/invite",
+        name: "CenterInvite",
+        component: Invite
+      },
+      {
+        path: "/settings/add",
+        name: "CenterAdd",
+        component: Add
+      },
+      {
+        path: "/:catchAll(.*)",
+        name: 'NotFound',
+        component: NotFound
       }
     ]
 })
