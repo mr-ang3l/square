@@ -31,7 +31,7 @@ body {
 
 @media only screen and (max-width: 500px) {
   #app {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     min-width: 300px;
     min-height: 300px;
