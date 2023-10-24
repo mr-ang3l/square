@@ -64,6 +64,12 @@ import {RouterLink} from 'vue-router';
   font-size: clamp(1rem, 1.5rem + 10.333vh, 10rem);
   color: #0001fc;
   cursor: default;
+  background-image: url(https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcHVzbDQxdjBraHF4N2huNXg4azVkNWZ2YXlxbGVkaDc5bDh0MzdiOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8w61HSu6xQjoa2NzKN/giphy.gif);
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: rgba(0, 1, 252, .5);
+;
 }
 
 .input {
