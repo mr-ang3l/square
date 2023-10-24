@@ -10,7 +10,7 @@ import {RouterLink} from 'vue-router';
     <div class="input">
       <div class="input-title">
         Login /
-        <a href="https://www.google.com/" target="blank">Join</a>
+        <a class="join" href="https://www.google.com/" target="blank">Join?</a>
       </div>
       <input type="email" placeholder="Email" />
       <input type="password" placeholder="Password" />
@@ -39,9 +39,10 @@ import {RouterLink} from 'vue-router';
   z-index: 2;
   width: 100%;
   height: fit-content;
-  padding-inline: 1em;
+  padding-inline: .5em;
   grid-column: 1;
   grid-row: 1;
+  font-size: 1.5em;
   text-align: right;
   font-weight: bold;
   color: #0001fc;
@@ -121,7 +122,7 @@ a {
   text-decoration: none;
   cursor: pointer;
   color: #0001fc;
-  transition: all 55ms ease-in;
+  transition: all 70ms ease-in;
 }
 
 a:hover,
@@ -129,6 +130,19 @@ a:active {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #0001fc;
   color: white;
+}
+
+.join {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #0001fc;
+  color: white;
+}
+
+.join:hover {
+  text-decoration: none;
+  cursor: pointer;
+  color: #0001fc;
+  transition: all 55ms ease-in;
 }
 
 @media only screen and (max-width: 500px) {

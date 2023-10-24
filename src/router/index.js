@@ -1,6 +1,7 @@
 import {createRouter, createWebHistory} from "vue-router";
 import Start from "../views/start-page.vue";
 import Profile from "../views/profile-page.vue";
+import Settings from "../views/settings-page.vue"
 
 
 const router = createRouter({
@@ -15,6 +16,11 @@ const router = createRouter({
         path: "/profile",
         name: "profile",
         component: Profile
+      },
+      {
+        path: "/settings",
+        name: "settings",
+        component: Settings
       }
     ]
 })

@@ -1,5 +1,5 @@
 <script setup>
-
+import {RouterLink} from 'vue-router';
 </script>
 
 <template>
@@ -7,9 +7,9 @@
     <section class="name_grid">
       <a class="name" href="https://x.com/fredagainagain1?s=20" target="blank">Fred again...</a>
       <div class="profile_photo_container">
-        <a href="" target="_blank">
+        <RouterLink  to="/settings">
           <img alt="profile_photo" class="profile_photo" src="../assets/img/profile_picture.webp"/>
-        </a>
+        </RouterLink>
       </div>
     </section>
     <section class="photos_grid">
