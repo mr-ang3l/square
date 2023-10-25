@@ -7,7 +7,11 @@ import {RouterLink} from 'vue-router';
         <RouterLink  :to="{name: 'Profile'}">Me</RouterLink>
         <RouterLink  :to="{name: 'CenterInvite'}">Invite?</RouterLink>
         <RouterLink  :to="{name: 'CenterAdd'}">Add?</RouterLink>
-
+        <RouterLink  :to="{name: 'CenterFollowers'}">Followers</RouterLink>
+        <RouterLink  :to="{name: 'CenterFollowing'}">Following</RouterLink>
+        <RouterLink  :to="{name: 'CenterSquare'}">Square</RouterLink>
+        <RouterLink  :to="{name: 'CenterSettings'}">Settings</RouterLink>
+        <RouterLink  :to="{name: 'Login'}">Exit</RouterLink>
     </main>
 </template>
 

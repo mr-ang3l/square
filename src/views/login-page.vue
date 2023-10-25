@@ -31,9 +31,9 @@ import {RouterLink} from 'vue-router';
   src: url('../assets/fonts/nikea/NIKEA.otf') format('opentype');
 }
 
-. > * {
+/* . > * {
   border: solid blue 1px;
-}
+} */
 
 .about {
   z-index: 2;

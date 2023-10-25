@@ -2,6 +2,7 @@
     <main>
         <h1>EEEEError 404</h1>
         <h2>page not found</h2>
+        <RouterLink  :to="{name: 'Profile'}" > 🏠? </RouterLink>
     </main>
 </template>
 
@@ -40,5 +41,15 @@
 
     h2 {
         font-family: 'Helvetica';
+    }
+
+    a {
+    margin-top: 5px;
+    text-decoration: none;
+    font-family: 'Helvetica';
+    font-size: 2rem;
+    cursor: pointer;
+    color: #0001fc;
+    transition: all 70ms ease-in;
     }
 </style>
