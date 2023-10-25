@@ -1,5 +1,10 @@
 <script setup>
 import {RouterLink} from 'vue-router';
+import photosData from './photos.json';
+
+const bPhotos = photosData.big;
+const sPhotos = photosData.small;
+
 </script>
 
 <template>
@@ -14,15 +19,10 @@ import {RouterLink} from 'vue-router';
     </section>
     <section class="photos_grid">
       <div class="big_photos_grid">
-        <img class="photo" src="https://pbs.twimg.com/media/FzoRFKTWAAMSUmd?format=jpg&name=small">
-        <img class="photo" src="https://pbs.twimg.com/media/Frc-J2CWwAAg4V0?format=jpg&name=small">
-        <img class="photo" src="https://pbs.twimg.com/media/FdpoTMjXkAA_6kG?format=jpg&name=large">
+        <img class="photo" v-for="photo in bPhotos" :key="photo.id" :src="photo.source">
       </div>
       <div class="small_photos_grid">
-        <img class="photo" src="https://dt7v1i9vyp3mf.cloudfront.net/styles/news_large/s3/imagelibrary/F/Fred_Again_01-ek5spoxRapFfVohY5SG8oGzj9HFiZGYH.jpg">
-        <img class="photo" src="https://www.russh.com/wp-content/uploads/2023/02/rvgt4.jpg">
-        <img class="photo" src="https://majomontemayor.com/wp-content/uploads/2023/03/fredagainv2-1600x1600.png">
-        <img class="photo" src="https://ichef.bbci.co.uk/news/976/cpsprodpb/CF39/production/_128094035_fred_again_headie.jpg">
+        <img class="photo" v-for="photo in sPhotos" :key="photo.id" :src="photo.source">
       </div>
     </section>
   </main>
@@ -100,16 +100,17 @@ import {RouterLink} from 'vue-router';
   grid-column: 1 / 4;
   grid-row: 1 / 5;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-rows: 100%;
 }
 
 .small_photos_grid {
   grid-column: 1 / 4;
   grid-row: 5 / 7;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-rows: 100%;
 }
 
 .photo {
@@ -119,6 +120,7 @@ import {RouterLink} from 'vue-router';
   height: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
+  object-position: center;
   transition: all 130ms ease-in;
 }
 
@@ -127,4 +129,7 @@ import {RouterLink} from 'vue-router';
   
 }
 
+img{
+  width: 10px;
+}
 </style>

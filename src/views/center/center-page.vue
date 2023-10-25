@@ -4,14 +4,16 @@ import {RouterLink} from 'vue-router';
 
 <template>
     <main class="settings_grid">
-        <RouterLink  :to="{name: 'Profile'}">Me</RouterLink>
-        <RouterLink  :to="{name: 'CenterInvite'}">Invite?</RouterLink>
-        <RouterLink  :to="{name: 'CenterAdd'}">Add?</RouterLink>
-        <RouterLink  :to="{name: 'CenterFollowers'}">Followers</RouterLink>
-        <RouterLink  :to="{name: 'CenterFollowing'}">Following</RouterLink>
-        <RouterLink  :to="{name: 'CenterSquare'}">Square</RouterLink>
-        <RouterLink  :to="{name: 'CenterSettings'}">Settings</RouterLink>
-        <RouterLink  :to="{name: 'Login'}">Exit</RouterLink>
+        <section class="settings">
+            <RouterLink  :to="{name: 'Profile'}">Me</RouterLink>
+            <RouterLink  :to="{name: 'CenterInvite'}">Invite?</RouterLink>
+            <RouterLink  :to="{name: 'CenterAdd'}">Add?</RouterLink>
+            <RouterLink  class="users_count" :to="{name: 'CenterFollowers'}">Followers: {{ 4 }}</RouterLink>
+            <RouterLink  class="users_count" :to="{name: 'CenterFollowing'}">Following: {{ 4 }}</RouterLink>
+            <RouterLink  :to="{name: 'CenterSquare'}">Square</RouterLink>
+            <RouterLink  :to="{name: 'CenterSettings'}">Settings</RouterLink>
+            <RouterLink  :to="{name: 'Login'}">Exit</RouterLink>
+        </section>
     </main>
 </template>
 
@@ -24,15 +26,18 @@ import {RouterLink} from 'vue-router';
     .settings_grid {
         height: 100%;
         display: flex;
-        flex-direction: column;
         align-items: center;
         justify-content: center;
         text-align: left;
         font-family: Helvetica;
     }
 
-    .settings_grid > * {
-        width: 4em;
+    .settings {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .settings > * {
         margin: 0;
         padding: 0;
         text-align: left;
@@ -44,4 +49,5 @@ import {RouterLink} from 'vue-router';
     a:hover {
         color: #8787da;
     }
+
 </style>

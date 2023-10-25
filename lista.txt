@@ -1,0 +1,11 @@
+Inicio con seguidores
+
+Capacidad para elegir si quieres subir una foto/ video/ un texto/ canción con API de música.
+
+Los textos tienen un límite de ~250 caracteres
+
+Capacidad para borrar seguidores y seguidos
+
+Regulador de resolución de imágenes
+
+Seguidores y seguidos en una sola sección repartido en dos pestañas

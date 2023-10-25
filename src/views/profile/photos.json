@@ -1,0 +1,26 @@
+{
+    "big": [
+        {
+            "id": 1,
+            "source": "https://pbs.twimg.com/media/FzoRFKTWAAMSUmd?format=jpg&name=small"
+        },
+        {
+            "id": 2,
+            "source": "https://pbs.twimg.com/media/Frc-J2CWwAAg4V0?format=jpg&name=small"
+        },
+        {
+            "id": 3,
+            "source": "https://pbs.twimg.com/media/FdpoTMjXkAA_6kG?format=jpg&name=large"
+        }
+    ],
+    "small": [
+        {
+            "id": 4,
+            "source": "https://dt7v1i9vyp3mf.cloudfront.net/styles/news_large/s3/imagelibrary/F/Fred_Again_01-ek5spoxRapFfVohY5SG8oGzj9HFiZGYH.jpg"
+        },
+        {
+            "id": 5,
+            "source": "https://www.russh.com/wp-content/uploads/2023/02/rvgt4.jpg"
+        }
+    ]
+}
