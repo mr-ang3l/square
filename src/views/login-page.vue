@@ -10,7 +10,7 @@ import {RouterLink} from 'vue-router';
     <div class="input">
       <div class="input-title">
         Login /
-        <a class="join" href="https://www.google.com/" target="blank">Join?</a>
+        <RouterLink class="join" :to="{name: 'Register'}" > Join? </RouterLink>
       </div>
       <input type="email" placeholder="Email" />
       <input type="password" placeholder="Password" />
