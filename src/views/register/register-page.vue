@@ -1,7 +1,15 @@
 <script setup>
-	import { ref, onMounted } from 'vue'
+	import { ref, reactive } from 'vue'
 
-	var eye = ref()
+	let eye = ref()
+
+	const toggle = reactive({
+		match: true,
+		unmatch: false
+	});
+
+	const password = ref('');
+	const password2 = ref('');
 
 	function toggleView () {
 		if (eye.value.type === "password") {
@@ -11,20 +19,32 @@
 		}
 		console.log(eye.value.type)
 	}
+
+	function passEqual() {
+		if (password.value === password2.value) {
+			toggle.match = true;
+			toggle.unmatch = false; 
+		} else {
+			toggle.match = false;
+			toggle.unmatch = true;
+		}
+	}
+
+
 </script>
 
 <template>
 	<form >
 		<label for="name">First name</label>
-		<input type="text" id="f-name" name="name">
+		<input type="text" id="f-name" name="name" autocomplete="cc-given-name">
 		<label for="l-name">Last name</label>
-		<input type="text" id="l-name" name="l-name">
+		<input type="text" id="l-name" name="l-name" autocomplete="cc-family-name">
 		<label for="email">Mail</label>
-		<input type="email" id="email" name="email">
+		<input type="email" id="email" name="email" autocomplete="email">
 		<label for="password">Password</label>
-		<input type="password" name="password">
+		<input v-model="password" @input="passEqual"  type="password" name="password" :class="toggle" autocomplete="new-password">
 		<label for="r-password">Re-Enter Password</label>
-		<input type="password" name="r-password">
+		<input v-model="password2" @input="passEqual"  type="password" name="r-password" :class="toggle" autocomplete="new-password">
 		<input type="submit" id="r-submit" name="r-submit" value="Submit">
 		<p>▽</p>
 	</form>
@@ -84,6 +104,14 @@ input[type='submit'] {
   -webkit-text-stroke-color: #0001fc;
   color: white;
   cursor: pointer;
+}
+
+.match {
+	border: 1px solid green;
+}
+
+.unmatch {
+	border: 1px solid red;
 }
 
 </style>
